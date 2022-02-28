@@ -5,17 +5,27 @@ export const FeedbackProvider =({children})=>{
     const [feedback,setFeedback] =useState([
         {id:'1',
         rating:10,
-        text:"lorem insum"
+        text:"This is item 1"
         },
         {id:'2',
         rating:7,
-        text:"lorem insum"
+        text:"This is item 2"
         },
         {id:'3',
         rating:5,
-        text:"lorem insum"
+        text:"This is item 3"
         },
     ]);
+    const [feedbackEdit,setFeedbackEdit] =useState({
+        item:{},
+        edit:false
+    })
+    const feedbackEditSubmit=(item)=>{
+        setFeedbackEdit({
+            item,
+            edit:true
+        })
+    }
     const handleFeedbackSubmit =(newFeedback)=>{
         newFeedback.id =uuidv4();
         setFeedback([newFeedback,...feedback])
@@ -30,7 +40,9 @@ export const FeedbackProvider =({children})=>{
     return <FeedbackContext.Provider value={{
         feedback,
         deleteItem,
-        handleFeedbackSubmit
+        handleFeedbackSubmit,
+        feedbackEdit,
+        feedbackEditSubmit
     }}>
         {children}
     </FeedbackContext.Provider>
