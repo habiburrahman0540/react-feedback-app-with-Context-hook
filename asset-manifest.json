@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-feedback-app-with-Context-hook/static/css/main.2ffba3fe.css",
+    "main.js": "/react-feedback-app-with-Context-hook/static/js/main.250643a1.js",
+    "index.html": "/react-feedback-app-with-Context-hook/index.html",
+    "main.2ffba3fe.css.map": "/react-feedback-app-with-Context-hook/static/css/main.2ffba3fe.css.map",
+    "main.250643a1.js.map": "/react-feedback-app-with-Context-hook/static/js/main.250643a1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2ffba3fe.css",
+    "static/js/main.250643a1.js"
+  ]
+}
