@@ -12,7 +12,7 @@ export const FeedbackProvider =({children})=>{
         fetchData()
     },[])
     const fetchData =async()=>{
-        const response = await fetch(`/feedback?_sort=id&_order=desc`);
+        const response = await fetch(`https://epic-panini-e00fbd.netlify.app/feedback?_sort=id&_order=desc`);
         const data = await response.json();
         setFeedback(data);
         setLoading(false)
@@ -25,7 +25,7 @@ export const FeedbackProvider =({children})=>{
         })
     }
     const handleFeedbackSubmit =async(newFeedback)=>{
-        const response = await fetch('/feedback',{
+        const response = await fetch('https://epic-panini-e00fbd.netlify.app/feedback',{
             method:'POST',
             headers:{
                 'Content-Type':'application/json'
@@ -39,7 +39,7 @@ export const FeedbackProvider =({children})=>{
     }
     const deleteItem =async(id)=>{
         if(window.confirm("Are you sure you want to delete it ?")){
-            await fetch(`/feedback/${id}`,{method:"DELETE"})
+            await fetch(`https://epic-panini-e00fbd.netlify.app/feedback/${id}`,{method:"DELETE"})
             setFeedback(feedback.filter(item=>item.id !== id))
         }
     }
