@@ -1,5 +1,5 @@
 import React,{useContext} from 'react'
-import PropTypes from "prop-types"
+
 import Card from "./share/Card"
 import {FaTimes} from "react-icons/fa"
 import {FaEdit} from "react-icons/fa"
@@ -20,8 +20,6 @@ const FeedbackItem = ({item}) => {
     
   )
 }
-FeedbackItem.propTypes ={
-    item:PropTypes.object.isRequired
-}
+
 
 export default FeedbackItem
