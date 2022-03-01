@@ -12,7 +12,7 @@ export const FeedbackProvider =({children})=>{
         fetchData()
     },[])
     const fetchData =async()=>{
-        const response = await fetch(`https://epic-panini-e00fbd.netlify.app/feedback?_sort=id&_order=desc`);
+        const response = await fetch(`https://epic-panini-e00fbd.netlify.app/feedback`);
         const data = await response.json();
         setFeedback(data);
         setLoading(false)
